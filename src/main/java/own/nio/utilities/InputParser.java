@@ -4,10 +4,15 @@ public class InputParser implements Parser{
     @Override
     public String[] parse(Object entity) {
         String text = (String) entity;
+        text = text.trim();
+
         if (!text.contains(" ")) {
             return new String[]{text};
         }
-        if (!text.contains("\"")) {
+        if (text.contains(" ") && !text.contains("\"")) {
+            return new String[]{};
+        }
+        if (text.indexOf("\"") == text.lastIndexOf("\"")) {
             return new String[]{};
         }
 

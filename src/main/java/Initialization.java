@@ -50,6 +50,7 @@ public class Initialization {
     public static void showRules(){
         System.out.println("\n");
         System.out.println("It is necessary to use double quotes for names : ");
+        System.out.println("It is necessary not to use whitespaces for numbers");
         System.out.println(" \"John Dow\" \" Spider-Man\" ");
         System.out.println("Empty lines are treated as a word delimiter, be careful");
         System.out.println("Use \"add\" to add a new contact");
